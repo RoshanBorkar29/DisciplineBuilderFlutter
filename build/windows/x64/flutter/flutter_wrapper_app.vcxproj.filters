@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\NewFlutterProjects\flutter projects\flutter_application_1\flutter_discplinebuilder\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\NewFlutterProjects\flutter projects\flutter_application_1\flutter_discplinebuilder\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\NewFlutterProjects\flutter projects\flutter_application_1\flutter_discplinebuilder\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\NewFlutterProjects\flutter projects\flutter_application_1\flutter_discplinebuilder\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\NewFlutterProjects\flutter projects\flutter_application_1\flutter_discplinebuilder\windows\flutter\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{09D0571E-2E57-36B6-92F7-5BACB89B55A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B6684354-EA28-3BD4-8AD6-D4E41055D72E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

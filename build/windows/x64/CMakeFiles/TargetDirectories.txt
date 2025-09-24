@@ -1,0 +1,13 @@
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/CMakeFiles/INSTALL.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/CMakeFiles/ALL_BUILD.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/CMakeFiles/ZERO_CHECK.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_app.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/flutter/CMakeFiles/flutter_assemble.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/flutter/CMakeFiles/INSTALL.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/runner/CMakeFiles/flutter_discplinebuilder.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/runner/CMakeFiles/INSTALL.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/runner/CMakeFiles/ALL_BUILD.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/plugins/http_io/CMakeFiles/http_io_plugin.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/plugins/http_io/CMakeFiles/INSTALL.dir
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/plugins/http_io/CMakeFiles/ALL_BUILD.dir

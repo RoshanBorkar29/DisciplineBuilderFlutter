@@ -1,0 +1,28 @@
+^D:\NEWFLUTTERPROJECTS\FLUTTER PROJECTS\FLUTTER_APPLICATION_1\FLUTTER_DISCPLINEBUILDER\BUILD\WINDOWS\X64\CMAKEFILES\A7FCA8CACB93C848D3B183F893CB4222\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+D:\SoftWareInstaller\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E env FLUTTER_ROOT=D:\FLutter\src\flutter "PROJECT_DIR=D:\NewFlutterProjects\flutter projects\flutter_application_1\flutter_discplinebuilder" FLUTTER_ROOT=D:\FLutter\src\flutter "FLUTTER_EPHEMERAL_DIR=D:\NewFlutterProjects\flutter projects\flutter_application_1\flutter_discplinebuilder\windows\flutter\ephemeral" "PROJECT_DIR=D:\NewFlutterProjects\flutter projects\flutter_application_1\flutter_discplinebuilder" "FLUTTER_TARGET=D:\NewFlutterProjects\flutter projects\flutter_application_1\flutter_discplinebuilder\lib\main.dart" DART_DEFINES=RkxVVFRFUl9WRVJTSU9OPTMuMzIuMg==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049OGRlZmFhNzFhNw==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049MTA5MTUwODkzOQ==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My44LjE= DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false "PACKAGE_CONFIG=D:\NewFlutterProjects\flutter projects\flutter_application_1\flutter_discplinebuilder\.dart_tool\package_config.json" D:/FLutter/src/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\NEWFLUTTERPROJECTS\FLUTTER PROJECTS\FLUTTER_APPLICATION_1\FLUTTER_DISCPLINEBUILDER\BUILD\WINDOWS\X64\CMAKEFILES\9E870BCC7A80A6B7C54A3AD789724ED0\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\NEWFLUTTERPROJECTS\FLUTTER PROJECTS\FLUTTER_APPLICATION_1\FLUTTER_DISCPLINEBUILDER\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+D:\SoftWareInstaller\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe "-SD:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/windows" "-BD:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64" --check-stamp-file "D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/flutter/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
