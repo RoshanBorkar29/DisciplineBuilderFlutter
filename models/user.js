@@ -40,6 +40,10 @@ dailySummary: [
     totalTasks: Number,
     tasksCompleted: Number,
     points: Number,
+     streakCounted: {
+        type: Boolean,
+        default: false,
+    },
   }
 ],
 

@@ -5,6 +5,7 @@ D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebu
 D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json
 D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
 D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/runner/Debug/data/flutter_assets/assets/animations/Fire.json
+D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/runner/Debug/data/flutter_assets/assets/animations/Trophy.json
 D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
 D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 D:/NewFlutterProjects/flutter projects/flutter_application_1/flutter_discplinebuilder/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin

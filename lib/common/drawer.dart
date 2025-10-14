@@ -1,17 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_discplinebuilder/common/leaderboard.dart';
+import 'package:flutter_discplinebuilder/common/statusleague.dart';
 import 'package:flutter_discplinebuilder/features/profilescreen.dart';
+import 'package:flutter_discplinebuilder/services/authService.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class MyDrawer extends StatelessWidget {
+class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
-  
+
+  @override
+  State<MyDrawer> createState() => _MyDrawerState();
+}
+
+class _MyDrawerState extends State<MyDrawer> {
   Future<Map<String, String>> getUserInfo() async {
     final prefs = await SharedPreferences.getInstance();
     final name = prefs.getString('userName') ?? 'User Name';
     final email = prefs.getString('userEmail') ?? 'user@email.com';
     return {'name': name, 'email': email};
   }
+final AuthService _authService=AuthService();
+  void signOut(){
+    _authService.logout(context);
+  }
+
   @override
+  
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: Colors.blueGrey[900],
@@ -55,7 +69,7 @@ class MyDrawer extends StatelessWidget {
                 ),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.pushReplacementNamed(context, ProfileScreen.routeName);
+                  Navigator.pushNamed(context, ProfileScreen.routeName);
                 },
               ),
           
@@ -68,7 +82,7 @@ class MyDrawer extends StatelessWidget {
                 ),
                 onTap: () {
                   Navigator.pop(context);
-                  // Navigate to Status screen
+                  Navigator.pushNamed(context,Status.routeName);
                 },
               ),
           
@@ -81,7 +95,7 @@ class MyDrawer extends StatelessWidget {
                 ),
                 onTap: () {
                   Navigator.pop(context);
-                  // Navigate to Leaderboard screen
+                  Navigator.pushNamed(context,Leaderboard.routeName);
                 },
               ),
           
@@ -95,7 +109,7 @@ class MyDrawer extends StatelessWidget {
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.redAccent),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  signOut();
                   // Handle logout logic
                 },
               ),

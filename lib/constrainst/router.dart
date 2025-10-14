@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_discplinebuilder/common/leaderboard.dart';
+import 'package:flutter_discplinebuilder/common/statusleague.dart';
 import 'package:flutter_discplinebuilder/features/NameAgeScreen.dart';
 import 'package:flutter_discplinebuilder/features/home.dart';
 import 'package:flutter_discplinebuilder/features/homescreen.dart';
@@ -35,6 +37,16 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
       return MaterialPageRoute(
         settings:routeSettings,
         builder: (_)=>const RegisterScreen());
+      
+        case Status.routeName:
+      return MaterialPageRoute(
+        settings:routeSettings,
+        builder: (_)=>const Status());
+
+          case Leaderboard.routeName:
+      return MaterialPageRoute(
+        settings:routeSettings,
+        builder: (_)=>const Leaderboard());
     default:
       return MaterialPageRoute(
         builder: (_) => const Scaffold(

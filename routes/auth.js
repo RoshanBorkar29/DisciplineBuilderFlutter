@@ -3,8 +3,10 @@ const User = require("../models/user");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const auth = require("../middlewares/auth"); // auth middleware
-
+const {OAuth2Client}=require('google-auth-library');
 const authRouter = express.Router();
+const YOUR_CLIENT_SERVER_ID='1095715791482-3isruo3p83p1c3p81l8dl50gs6nj8ac6.apps.googleusercontent.com';
+const Client=new OAuth2Client( YOUR_CLIENT_SERVER_ID);
 
 // ==================== SIGNUP ====================
 authRouter.post("/api/signup", async (req, res) => {

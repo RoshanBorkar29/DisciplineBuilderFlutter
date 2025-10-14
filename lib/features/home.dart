@@ -4,6 +4,7 @@ import 'package:flutter_discplinebuilder/common/daysummary.dart';
 import 'package:flutter_discplinebuilder/common/drawer.dart';
 import 'package:flutter_discplinebuilder/common/task.dart';
 import 'package:flutter_discplinebuilder/common/time.dart';
+import 'package:flutter_discplinebuilder/services/authService.dart';
 import 'package:flutter_discplinebuilder/services/taskService.dart';
 import 'package:lottie/lottie.dart';
 import 'package:confetti/confetti.dart';
@@ -29,7 +30,11 @@ class _HomeState extends State<Home> {
   late ConfettiController _confettiController;
   bool _showStreakAnimation = false;
   String? lastStreakDate;
-
+  final AuthService _authService= AuthService();
+  int todaysPoints=0;
+  
+  
+  
   @override
   void initState() {
     super.initState();
@@ -76,7 +81,36 @@ class _HomeState extends State<Home> {
       );
     }
   }
-
+  
+  Future<void> _loadUserData() async {
+    try {
+      final userData = await _authService.fetchUserProfile(context);
+      
+      if (!mounted) return;
+      
+      if (userData != null) {
+        setState(() {
+          // 1. Update streakCount from server data
+          streakCount = userData['streak'] ?? 0;
+          
+          // 2. Calculate today's points from the fetched task list.
+          // This is necessary because 'todaysPoints' is purely local.
+          int completed = tasks.where((t) => t.isCompleted).length;
+          todaysPoints = completed * 5;
+          
+          // Also update the dailySummaries map for consistency
+          dailySummaries[today] = DaySummary(
+            date: today,
+            completedTasks: completed,
+            totalTasks: tasks.length,
+            points: todaysPoints,
+          );
+        });
+      }
+    } catch (e) {
+      print('Error loading user data: $e');
+    }
+  }
   void showAddTask() {
     showDialog(
       context: context,
@@ -120,8 +154,9 @@ class _HomeState extends State<Home> {
                     await _taskService.addTask(userId, taskController.text.trim(), context);
                     print('Task added to backend');
                     taskController.clear();
+                    await _loadTasks();
                     Navigator.pop(context);
-                    await _loadTasks(); // Refresh tasks from backend
+                     // Refresh tasks from backend
                   } catch (e) {
                     print('Error adding task: $e');
                     ScaffoldMessenger.of(context).showSnackBar(
@@ -185,7 +220,7 @@ class _HomeState extends State<Home> {
       await _taskService.deleteTask(userId, index, context);
       setState(() {
         tasks.removeAt(index);
-        dailySummaries[today]?.points = 0;
+        dailySummaries[today]?.points -=5;
       });
     } catch (e) {
       print('Error deleting task: $e');
@@ -235,7 +270,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     print('Tasks in UI: ${tasks.map((t) => t.title).toList()}');
-    int todayPoints = dailySummaries[today]?.points ?? 0;
+    int todayPoints = todaysPoints;
     return Scaffold(
       drawer: const MyDrawer(),
       appBar: AppBar(

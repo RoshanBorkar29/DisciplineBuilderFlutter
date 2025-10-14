@@ -99,8 +99,14 @@ class TaskService {
       httpErrorHandle(
         response: response,
         context: context,
-        onSuccess: () {
-          print("Task toggled successfully");
+        onSuccess: () async {
+        final decoded = jsonDecode(response.body);
+        final userData = decoded['user'];
+        if (userData != null) {
+          SharedPreferences prefs = await SharedPreferences.getInstance();
+          await prefs.setInt('points', userData['points']);
+          await prefs.setInt('streak', userData['streak']);
+        }
         },
       );
     } catch (e) {
@@ -141,4 +147,5 @@ class TaskService {
       rethrow;
     }
   }
+   
 }

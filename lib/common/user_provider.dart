@@ -28,4 +28,17 @@ class UserProvider with ChangeNotifier {
     _user = user;
     notifyListeners();
   }
+  void clearUser(){
+    _user=User(
+        id: '',
+      name: '',
+      email: '',
+      password: '', // Password field is typically excluded/ignored in provider state
+      token: '',
+      streak: 0,
+      points: 0,
+      league: 'Bronze',
+    );
+    notifyListeners();
+  }
 }
